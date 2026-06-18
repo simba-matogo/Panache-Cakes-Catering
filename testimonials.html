@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Testimonials — Panache Catering</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <a class="skip-link" href="#content">Skip to content</a>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html">Panache</a>
+
+      <button id="mobile-menu-btn" class="menu-btn" aria-controls="primary-nav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="hamburger" aria-hidden="true"></span>
+      </button>
+
+      <nav id="primary-nav" class="primary-nav hidden" role="navigation" aria-label="Primary navigation">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="testimonials.html" aria-current="page">Testimonials</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <main id="content" tabindex="-1" class="container testimonials-page">
+    <h1>What clients say</h1>
+    <div class="testimonials-grid">
+      <blockquote class="testimonial-card">
+        <p>"Panache made our wedding unforgettable — every detail was flawless."</p>
+        <footer>— Emma R., Bride</footer>
+      </blockquote>
+      <blockquote class="testimonial-card">
+        <p>"Professional, creative, and the food was outstanding. Highly recommend."</p>
+        <footer>— Marcus P., Event Manager</footer>
+      </blockquote>
+      <blockquote class="testimonial-card">
+        <p>"Attentive service and beautiful presentation for our private dinner."</p>
+        <footer>— Lina S., Host</footer>
+      </blockquote>
+    </div>
+  </main>
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>&copy; <span id="year"></span> Panache Catering</p>
+      <nav class="footer-nav" aria-label="Social links">
+        <a href="#" aria-label="Instagram" class="social">IG</a>
+        <a href="#" aria-label="Facebook" class="social">FB</a>
+        <a href="#" aria-label="LinkedIn" class="social">IN</a>
+      </nav>
+    </div>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>

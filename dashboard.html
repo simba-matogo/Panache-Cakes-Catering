@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Provider Dashboard — Panache Catering</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <a class="skip-link" href="#dashboard-main">Skip to dashboard</a>
+  <div id="dashboard" class="dashboard-overlay" aria-hidden="false" role="dialog" aria-label="Service provider dashboard">
+    <aside class="dashboard-sidebar" role="navigation" aria-label="Dashboard sidebar">
+      <div class="sidebar-top">
+        <h3>Provider</h3>
+        <a href="index.html" class="close-dashboard" aria-label="Close dashboard">×</a>
+      </div>
+      <ul class="sidebar-nav">
+        <li><a href="#overview" class="sidebar-link active">Overview</a></li>
+        <li><a href="#bookings" class="sidebar-link">Bookings</a></li>
+        <li><a href="#inquiries" class="sidebar-link">Inquiries</a></li>
+        <li><a href="#events" class="sidebar-link">Upcoming Events</a></li>
+      </ul>
+      <div class="sidebar-footer">Signed in as <strong>Chef Admin</strong></div>
+    </aside>
+
+    <section class="dashboard-main" id="dashboard-main">
+      <header class="dashboard-header">
+        <h2 id="dashboard-title">Overview</h2>
+        <div class="dashboard-actions">
+          <button id="refresh-data" class="btn-ghost">Refresh</button>
+          <a href="index.html" class="btn-ghost">Sign out</a>
+        </div>
+      </header>
+
+      <div class="dashboard-content container">
+        <div id="overview">
+          <div class="cards-grid">
+            <div class="stat-card">
+              <h4>Total Revenue</h4>
+              <p class="stat-value" id="stat-revenue">$12,450</p>
+            </div>
+            <div class="stat-card">
+              <h4>Bookings</h4>
+              <p class="stat-value" id="stat-bookings">24</p>
+            </div>
+            <div class="stat-card">
+              <h4>Upcoming Events</h4>
+              <p class="stat-value" id="stat-events">6</p>
+            </div>
+            <div class="stat-card">
+              <h4>Unresolved Inquiries</h4>
+              <p class="stat-value" id="stat-inquiries">3</p>
+            </div>
+          </div>
+
+          <section class="mini-panel">
+            <h3>Upcoming</h3>
+            <ul id="mini-upcoming" class="mini-list"></ul>
+          </section>
+
+          <section class="mini-panel">
+            <h3>Recent Inquiries</h3>
+            <ul id="mini-inquiries" class="mini-list"></ul>
+          </section>
+        </div>
+
+        <div id="bookings" hidden>
+          <h3>Bookings</h3>
+          <table class="bookings-table" aria-label="Bookings overview">
+            <thead>
+              <tr><th>Client</th><th>Date</th><th>Guests</th><th>Package</th><th>Revenue</th></tr>
+            </thead>
+            <tbody id="bookings-tbody"></tbody>
+          </table>
+        </div>
+
+        <div id="inquiries" hidden>
+          <h3>Customer Inquiries</h3>
+          <ul id="inquiries-list" class="inquiries-list"></ul>
+        </div>
+
+        <div id="events" hidden>
+          <h3>Upcoming Events</h3>
+          <ul id="events-list" class="events-list"></ul>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
